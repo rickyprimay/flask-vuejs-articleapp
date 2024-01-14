@@ -19,7 +19,6 @@
     <div class="alert alert-warning alert-dismissibile fade show mt-5" role="alert" v-if="error">
         <strong>{{ error }}</strong>
     </div>
-
   </div>
 </template>
 

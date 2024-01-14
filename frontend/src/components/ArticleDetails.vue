@@ -3,7 +3,7 @@
       <h2> {{ article.title }} </h2>
       <p class="mt-3"> {{ article.body }} </p>
       <h6>Published Date : {{ article.date }}</h6>
-      <button class="btn btn-warning mx-3 mt-3">Edit</button>
+      <router-link class="btn btn-warning mt-3" :to="{ name : 'edit', params: { id:article.id } }">Update</router-link>
       <button @click="deleteArticle" class="btn btn-danger mx-3 mt-3">Delete</button>
     </div>
   </template>
