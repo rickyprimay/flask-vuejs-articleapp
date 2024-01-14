@@ -3,8 +3,11 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 import pytz
 from flask_marshmallow import Marshmallow
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
+
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:root@localhost:5432/flask_article"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
@@ -22,6 +25,7 @@ class Article(db.Model):
         self.body = body
 
 class ArticleSchema(ma.Schema):
+    date = ma.DateTime(format='%Y-%m-%d %H:%M')
     class Meta:
         fields  = ('id', 'title', 'body', 'date')
 
