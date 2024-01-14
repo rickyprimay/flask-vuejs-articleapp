@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item mr-2">
-                  <router-link class="btn btn-primary" aria-current="page" to="/">Home</router-link>
+                  <router-link class="btn btn-primary mx-3" aria-current="page" to="/">Home</router-link>
                 </li>
                 <li class="nav-item">
                   <router-link class="btn btn-success" to="/create">Create</router-link>
